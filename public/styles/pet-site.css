@@ -1,0 +1,87 @@
+body {
+    background-color: #caf0f8;
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    color: #03045e;
+    background-color: #00b4d8;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #03045e;
+    background-color: #00b4d8;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+p {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #343a40;
+}
+
+
+.textCard {
+    width: 600px;
+    margin: 3% auto;
+    text-align: center;
+}
+
+a {
+    font-weight: 500;
+    color: #03045e;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #48cae4; 
+    color: #03045e;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #03045e;
+}
