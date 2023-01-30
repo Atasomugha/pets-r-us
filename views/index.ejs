@@ -1,3 +1,11 @@
+<!--
+    Title: index.ejs
+    Author: Professor Krasso
+    Date: 29 January 2023
+    Modified By: Anachebe Asomugha
+    Description: ejs code for
+     WEB 340 Pets-R-Us Assignment
+--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +13,7 @@
     
     <title><%= title %></title>
 
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/styles/pet-site.css">
 
     <!--Font Family-->
@@ -14,23 +23,19 @@
 </head>
 <body>
     <header>
-        <section class="navbar">
+        <section class="navbar"> <!-- Site Navigation -->
             <a href="/">Home</a>
             <a style="margin-left: 20px;" href="/grooming">Grooming</a>
         </section> <br>
-        <h1 class="title"><%= pageTitle %></h1>
+        <h1 class="title"><%= pageTitle %></h1> <!-- Heading -->
         
         
     </header>
       
-
-    
-    
-    
     <div id="container">
 
         <div class="textCard">     
-            <div class="card">   
+            <div class="card">   <!-- Welcome Message card -->
                 
                 <div class="card-content" style="border-bottom: 8px solid #00b4d8; border-top: 8px solid black;">
                     <h2>Welcome to Pets-R-Us <br> The one-stop-shop for all of your pet care needs. </h2>
@@ -41,7 +46,7 @@
         
         <div class="textCard">     
             <div class="card">   
-                <div class="card-title">Grooming</div>
+                <div class="card-title">Grooming</div> <!-- Grooming card -->
 
                 <div class="card-content">
                     <p>Has your princely pooch been prancing and plopping <br>
@@ -62,7 +67,7 @@
 <br>
         <div class="textCard">     
             <div class="card">   
-                <div class="card-title">Training</div>
+                <div class="card-title">Training</div>  <!-- Training card -->
                 <div class="card-content">
                     <p>Does your dog’s danger sense go off at the slightest <br>
                         noise from the door? While it can be useful to have a <br>
@@ -83,7 +88,7 @@
 
         <div class="textCard">     
             <div class="card">   
-                <div class="card-title">Boarding</div>
+                <div class="card-title">Boarding</div> <!-- Boarding card  -->
                 <div class="card-content">
                     <p>When is the last time you got away? Sometimes it is necessary <br>
                         to take a break from the everyday responsibilities of life. But what <br>
@@ -99,8 +104,127 @@
             </div>            
         </div> 
 
+        <div class="textCard">
+            <div class="card">
+                <div class="card-title"> Locations </div>
+            </div>
+        <div class="locationCard">
+                
+                <div class="card"> <!-- West City Location -->
+                    <div class="card-content">
+                       <p> <b><u>West City</u></b> <br>
+                        1010 Basset Blvd. <br>
+                        West City, WC 99999 <br><br>
+                        <b>Hours</b> <br>
+                        Monday-Saturday: 9am - 7pm <br>
+                        Sunday: 11am - 5pm
+                    </p> 
+                    </div>
+                </div>
+                
+                <div class="card"> <!-- North City Location -->
+                    <div class="card-content">
+                       <p><b><u>North City</u></b> <br>
+                        2020 Dalmatian Drive <br>
+                        North City, NC 88888 <br><br>
+                        <b>Hours</b> <br>
+                        Monday-Saturday: 9am - 7pm <br>
+                        Sunday: 11am - 5pm
+                    </p> 
+                    </div>
+                </div>
+                    
+                <div class="card"> <!-- East City Location -->
+                    <div class="card-content">
+                        <p><b><u>East City</u></b> <br>
+                        3030 Corgi Court <br>
+                        East City, EC 77777 <br> <br> 
+                        <b>Hours</b> <br>
+                        Monday-Saturday: 9am - 7pm <br>
+                        Sunday: 11am - 5pm                
+                    </p>
+                    </div>
+                </div>
 
+                <div class="card"> <!-- South City Location -->
+                    <div class="card-content">
+                        <p><b><u>South City</u></b> <br>
+                        4040 Labrador Lane <br>
+                        South City, SC 66666 <br> <br> 
+                        <b>Hours</b> <br>
+                        Monday-Saturday: 9am - 7pm <br>
+                        Sunday: 11am - 5pm                
+                    </p>
+                    </div>
+                </div>
 
+        </div>        
+
+            <div class="textCard"> <!-- Dog of the Week card -->
+                <div class="card">   
+                    <div class="card-title">Dog Of The Week: Pugly </div>
+                    <div class="card-content">
+                        <img src="./images/pugly.jpg" alt="Pug in a blanket">
+                    </div>        
+                </div>
+            </div>
+
+            <div class="textCard">     <!-- Testimonials card -->
+                <div class="card">   
+                    <div class="card-title">Testimonials</div>
+                    <div class="card-content" id="testimonial">
+                        "Every time Pongo and I drive by Pets-R-Us,  
+                        he won't give <br> up until we go inside to see the friendly faces... and maybe grab a toy" - Matt H.
+                        <br> <br>
+                        "Vacation away from the pets has never been so stress free. <br> 
+                        Thank you Pets-R-Us for watching Luna for me" - Shirley W.
+                        <br><br>
+                        "If I'm honest, I think its hilarious to see my poodle, Cooper, covered in soap <br>
+                        and getting pampered. We go every week" - Frank G.
+                        <br>
+                        <br>
+                        
+                    </div>        
+                </div>            
+            </div> 
+
+            <div class="textCard"> <!-- Contact Form -->
+                <div class="card">
+                    <div class="card-title">Contact Us</div>
+                    <div class="card-content">
+                        Have a burning question you've been dying to ask one of our Pet Professionals? <br>
+                        Contact Us Today <br>
+                        
+                        <section class="contact-wrap">
+                            <form action="" class="contact-form">
+            
+                                <div style="float: left; margin-left: 40px;" class="input-block">
+                                  <label for="">Name</label>
+                                  <input type="text" class="form-control">
+                                </div>
+
+                                <div style="float: right; margin-right: 30px;" class="input-block">
+                                  <label for="">Email</label>
+                                  <input type="text" class="form-control">
+                                </div>
+
+                              <br> <br>
+                              
+                                <div style="margin-right: 300px; margin-top: 20px;" class="textarea">
+                                  <label for="">Message</label>
+                                  <textarea rows="3" type="text" class="form-control"></textarea>
+                                </div>
+                              
+
+                              <div style="margin-left: 250px;">
+                                <button id="submitButton">Submit</button>
+                              </div>
+                            </form>
+                          </section>
+
+                    </div>
+                </div>
+            </div>
 
 
         

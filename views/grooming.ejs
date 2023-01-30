@@ -1,3 +1,12 @@
+<!--
+    Title: grooming.ejs
+    Author: Professor Krasso
+    Date: 29 January 2023
+    Modified By: Anachebe Asomugha
+    Description: ejs code for
+     WEB 340 Pets-R-Us Assignment
+--> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +14,7 @@
     
     <title><%= title %></title>
 
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/styles/pet-site.css">
 
     <!--Font Family-->
@@ -14,23 +24,17 @@
 </head>
 <body>
     <header>
-        <section class="navbar">
+        <section class="navbar"> <!-- Site Navigation -->
             <a href="/">Home</a>
             <a style="margin-left: 20px;" href="/grooming">Grooming</a>
         </section> <br>
-        <h1 class="title"><%= pageTitle %></h1>
-        
-        
+        <h1 class="title"><%= pageTitle %></h1> <!-- Heading --> 
     </header>
-      
-
-    
-    
-    
+ 
     <div id="container">
 
         <div class="textCard">     
-            <div class="card">   
+            <div class="card">   <!-- Welcome Message card -->
                 
                 <div class="card-content" style="border-bottom: 8px solid #00b4d8; border-top: 8px solid black;">
                     <h2>Welcome to Pets-R-Us <br> The one-stop-shop for all of your pet care needs. </h2>
@@ -40,7 +44,7 @@
         
         <br>
         
-        <div class="textCard">     
+        <div class="textCard">     <!-- Basic-Tier Grooming Package card -->
             <div class="card">   
 
                 <div class="card-title"> Just The Basics</div>
@@ -54,14 +58,14 @@
                         Oatmeal Shampoo bath with conditioner. A Blow-dry is <br>
                         next, followed by a brush. This package ends with an <br>
                         ear cleaning and, of course, nail trimming. <br> <br>
-                        Estimated time: <u>30-35 minutes</u>  <br>
-                        Price Range (by size and complexity): <u>$30 - $60</u> 
+                        <b> Estimated time:</b> <u>30-35 minutes</u>  <br>
+                        <b>Price Range </b> (by size and complexity): <u>$30 - $60</u> 
                     </p>
                 </div>        
             </div>            
         </div> 
 <br>
-        <div class="textCard">     
+        <div class="textCard">     <!-- Mid-Tier Grooming Package -->
             <div class="card">   
 
                 <div class="card-title"> A Little Extra </div>
@@ -75,8 +79,8 @@
                         comes extra service! This package adds teeth brushing, <br>
                         sanitary cleaning, face and tail trim, feet and paw pad <br>
                         trim, and puppy cologne to keep monster smelling fresh. <br><br>
-                        Estimated time: <u>45 - 60 minutes</u>  <br>
-                        Price Range (by size and complexity): <u>$50 - $80</u> 
+                        <b> Estimated time:</b> <u> 45 - 60 minutes</u>  <br>
+                        <b> Price Range</b> (by size and complexity): <u>$50 - $80</u> 
 
                     </p>
                 </div>        
@@ -85,10 +89,10 @@
 
         <br>
 
-        <div class="textCard">     
+        <div class="textCard">     <!-- High-Tier Grooming Package -->
             <div class="card">   
                 
-                <div class="card-title"> The Whole Shebang </div>
+                <div class="card-title"> The Whole She-bang </div>
 
                 <div class="card-content">
                     <p>Today, you’ve budgeted enough time to pull out allll the <br>
@@ -97,19 +101,14 @@
                         takes our previous packages and adds a full body hair trim, <br>
                         nail polish, and hair bows or a bandana for the pups that like <br>
                         to live on the edge! <br><br>
-                        Estimated time: <u>75 - 120 minutes</u>  <br>
-                        Price Range (by size and complexity): <u> $100 - $125</u>
+                        <b> Estimated time:</b> <u>75 - 120 minutes</u>  <br>
+                        <b> Price Range</b> (by size and complexity): <u> $100 - $125</u>
 
                     </p>
                 </div>        
             </div>            
         </div> 
-
-
-
-
-
-        
+    
     </div>
 
 
