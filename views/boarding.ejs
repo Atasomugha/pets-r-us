@@ -1,0 +1,126 @@
+<!--
+    Title: grooming.ejs
+    Author: Professor Krasso
+    Date: 29 January 2023
+    Modified By: Anachebe Asomugha
+    Description: ejs code for
+     WEB 340 Pets-R-Us Assignment
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title><%= title %></title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
+
+    <!--Font Family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('_header.ejs') %>
+ 
+    <div id="container">
+
+        <div class="textCard">     
+            <div class="card">   <!-- Welcome Message card -->
+                
+                <div class="card-content" style="border-bottom: 8px solid #00b4d8; border-top: 8px solid black;">
+                    <h2>Welcome to Pets-R-Us <br> The one-stop-shop for all of your pet care needs. </h2>
+                </div>        
+            </div>            
+        </div> 
+        
+        <br>
+        
+       
+
+        <div class="textCard">     <!-- Boarding Write-up -->
+            <div class="card">   
+                
+                <div class="card-title"> We'd love to puppy-sit </div>
+
+                <div class="card-content">
+                    <p class="para-center">Now you can step away from the everyday and <br>
+                        keep those pesky worries away! Whether your furry loved one need <br>
+                        to be cared for short term or long term, we can provide what you <br> 
+                        need to have the vacation of your dreams, here at Pets-R-Us!
+                        <br><br>
+                        Our new Boarding service was crafted with the need for security in <br>
+                        mind. We know that when you are away from your pets, you want to <br> 
+                        know that they are being looked after, cared for, and doted on. We are <br>
+                        not your pets’ parents, but it is our absolute pleasure to be second-best <br>
+                        in that arena. </p>
+                    
+                </div>        
+            </div>            
+        </div> 
+
+        <div class="textCard">     <!-- Boarding Write-up -->
+            <div class="card">   
+                
+                <div class="card-title"> Features </div>
+
+                <div class="card-content">
+                    <ul class="para-left">
+                        <li>Spacious indoor and outdoor yards</li>
+                        <li>Multiple play structures</li>
+                        <li>Ample water bowls and overhangs to provide shade</li>
+                        <li>Pool parties in our in-ground swimming pool</li>
+                        <li>Up to 3 meals per day (plus treats)</li>
+                    </ul>
+                    
+                </div>        
+            </div>            
+        </div>
+
+
+
+        <div class="textCard">     <!-- Pricing Breakdown -->
+            <div class="card">   
+                
+                <div class="card-title"> Pricing  </div>
+
+
+                    <div class="card-content">
+                        
+                        <p class="para-left">Size: Small to Medium (1 - 45 lbs) <br>
+                            Half Day: $20 <br>
+                            Single Day: $30 <br>
+                            Long-Term: $40 per day <br> 
+                            <br>
+                            Size: Medium to Large (45lbs+) <br>
+                            Half Day: $30 <br>
+                            Single Day: $40 <br>
+                            Long-Term: $50 per day</p>
+                            <br>
+                        <small>
+                            *It is our recommendation that any pet left with us should be spayed or 
+                            neutered. If they are not spayed or neutered, your pet will need to be
+                            kept in isolation from the other residents in an effort to avoid “mishaps.”
+                            An isolation surcharge will be added to your invoice at a rate of $10 per day.
+                        </small>    
+                    
+                    
+                    </div>
+                    
+                    
+                        
+                    
+                </div>           
+            </div>            
+        </div> 
+    
+    </div>
+
+
+
+    <%- include('_footer.ejs') %>    
+    
+</body>
+</html>

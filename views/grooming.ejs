@@ -15,7 +15,7 @@
     <title><%= title %></title>
 
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/styles/pet-site.css">
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
 
     <!--Font Family-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,13 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <section class="navbar"> <!-- Site Navigation -->
-            <a href="/">Home</a>
-            <a style="margin-left: 20px;" href="/grooming">Grooming</a>
-        </section> <br>
-        <h1 class="title"><%= pageTitle %></h1> <!-- Heading --> 
-    </header>
+    <%- include('_header.ejs') %>
  
     <div id="container">
 
@@ -50,7 +44,7 @@
                 <div class="card-title"> Just The Basics</div>
 
                 <div class="card-content">
-                    <p>Sometimes you just need to get in and get out. No <br> 
+                    <p class="para-center">Sometimes you just need to get in and get out. No <br> 
                         need for all of the extras. This package excludes <br> 
                         all of the peripheral luxuries that, frankly, we just <br>
                         don’t always have the time for. Our Just-The-Basics <br>
@@ -71,7 +65,7 @@
                 <div class="card-title"> A Little Extra </div>
 
                 <div class="card-content">
-                    <p>You’ve got a little extra time in your day, and you want to <br>
+                    <p class="para-center">You’ve got a little extra time in your day, and you want to <br>
                         spend it on your furry little monsters? We love it! <br>
                         Our “A Little Extra” package includes the Oatmeal and <br>
                         shampoo, conditioner, blow-dry, brush, ear cleaning, nail <br>
@@ -95,7 +89,7 @@
                 <div class="card-title"> The Whole She-bang </div>
 
                 <div class="card-content">
-                    <p>Today, you’ve budgeted enough time to pull out allll the <br>
+                    <p class="para-center">Today, you’ve budgeted enough time to pull out allll the <br>
                         stops! You want to pamper your pooch, and nothing is <br>
                         going to stop you! Our “The Whole Shebang” package <br>
                         takes our previous packages and adds a full body hair trim, <br>
@@ -113,7 +107,7 @@
 
 
 
-    <footer><p>&copy; Anachebe Asomugha &nbsp;&nbsp;&nbsp;<script >document.write(new Date().getFullYear())</script></p></footer>
+    <%- include('_footer.ejs') %>    
     
 </body>
 </html>

@@ -14,7 +14,7 @@
     <title><%= title %></title>
 
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/styles/pet-site.css">
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
 
     <!--Font Family-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,15 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <section class="navbar"> <!-- Site Navigation -->
-            <a href="/">Home</a>
-            <a style="margin-left: 20px;" href="/grooming">Grooming</a>
-        </section> <br>
-        <h1 class="title"><%= pageTitle %></h1> <!-- Heading -->
-        
-        
-    </header>
+    <%- include('_header.ejs') %>
       
     <div id="container">
 
@@ -38,7 +30,7 @@
             <div class="card">   <!-- Welcome Message card -->
                 
                 <div class="card-content" style="border-bottom: 8px solid #00b4d8; border-top: 8px solid black;">
-                    <h2>Welcome to Pets-R-Us <br> The one-stop-shop for all of your pet care needs. </h2>
+                    <h2>Welcome to Pets-R-Us <br> The one-stop-shop for all of your pet care needs.</h2>
                 </div>        
             </div>            
         </div> 
@@ -46,19 +38,19 @@
         
         <div class="textCard">     
             <div class="card">   
-                <div class="card-title">Grooming</div> <!-- Grooming card -->
+                <a href="/grooming"><div class="card-title">Grooming</div></a> <!-- Grooming card -->
 
                 <div class="card-content">
-                    <p>Has your princely pooch been prancing and plopping <br>
+                    <p class="para-center">Has your princely pooch been prancing and plopping <br>
                         through puddles of mud? Has your queenly cat been <br>
                         coughing up fur balls, crafting cacophonous coughing <br>
                         concerts, keeping you up throughout the night? If this<br> 
                         is the case, then you’re just in luck. Pets-R-Us is excited <br>
-                        to present to you our brand-new Grooming service, rolling <br>
+                        to present to you our brand-new <a href="/grooming">Grooming</a> service, rolling <br>
                         out nationwide in every Pets-R-Us location. Now your pet <br>
                         can look as good to the rest of the world as they do to you,<br>
                         their owner, whose judgement has been blinded by love goggles.<br> 
-                        Bring your fur-babies in today! Don’t they deserve to be <a href="/grooming">pampered</a>?
+                        Bring your fur-babies in today! Don’t they deserve to be pampered?
 
                     </p>
                 </div>        
@@ -67,17 +59,17 @@
 <br>
         <div class="textCard">     
             <div class="card">   
-                <div class="card-title">Training</div>  <!-- Training card -->
+                <a href="/training"><div class="card-title">Training</div></a>  <!-- Training card -->
                 <div class="card-content">
-                    <p>Does your dog’s danger sense go off at the slightest <br>
+                    <p class="para-center">Does your dog’s danger sense go off at the slightest <br>
                         noise from the door? While it can be useful to have a <br>
                         furry alarm at the volume of a storm siren going off every <br>
                          time the delivery truck pulls to a stop outside your home, <br>
                          perhaps its time to curtail that behavior and gain more <br>
-                        control. We would love to entice you with our new Training <br>
+                        control. We would love to entice you with our new <a href="/training">Training</a> <br>
                         service. A little bit of bootcamp never hurt anyone. Now, we <br>
                         can help you provide the structure and instruction that canines <br>
-                        crave. Set up an appointment today to train the howls away! 
+                        crave. Set up an appointment today to   the howls away! 
 
                     </p>
                 </div>        
@@ -88,17 +80,13 @@
 
         <div class="textCard">     
             <div class="card">   
-                <div class="card-title">Boarding</div> <!-- Boarding card  -->
+                <a href="/boarding"><div class="card-title">Boarding</div></a> <!-- Boarding card  -->
                 <div class="card-content">
-                    <p>When is the last time you got away? Sometimes it is necessary <br>
+                    <p class="para-center">When is the last time you got away? Sometimes it is necessary <br>
                         to take a break from the everyday responsibilities of life. But what <br>
                          to do with the dog? At Pets-R-Us, we have the answer to your <br>
                         query. Beginning today, Pets-R-Us is introducing a brand new <br>
-                        Boarding service. Now you can step away from the everyday and <br>
-                        keep those pesky worries away! Whether your furry loved one need <br>
-                        to be cared for short term or long term, we can provide what you <br> 
-                        need to have the vacation of your dreams, here at Pets-R-Us!
-
+                        <a href="/boarding">Boarding</a>  service. 
                     </p>
                 </div>        
             </div>            
@@ -112,7 +100,7 @@
                 
                 <div class="card"> <!-- West City Location -->
                     <div class="card-content">
-                       <p> <b><u>West City</u></b> <br>
+                       <p class="para-center"> <b><u>West City</u></b> <br>
                         1010 Basset Blvd. <br>
                         West City, WC 99999 <br><br>
                         <b>Hours</b> <br>
@@ -124,7 +112,7 @@
                 
                 <div class="card"> <!-- North City Location -->
                     <div class="card-content">
-                       <p><b><u>North City</u></b> <br>
+                       <p class="para-center"><b><u>North City</u></b> <br>
                         2020 Dalmatian Drive <br>
                         North City, NC 88888 <br><br>
                         <b>Hours</b> <br>
@@ -136,7 +124,7 @@
                     
                 <div class="card"> <!-- East City Location -->
                     <div class="card-content">
-                        <p><b><u>East City</u></b> <br>
+                        <p class="para-center"><b><u>East City</u></b> <br>
                         3030 Corgi Court <br>
                         East City, EC 77777 <br> <br> 
                         <b>Hours</b> <br>
@@ -148,7 +136,7 @@
 
                 <div class="card"> <!-- South City Location -->
                     <div class="card-content">
-                        <p><b><u>South City</u></b> <br>
+                        <p class="para-center"><b><u>South City</u></b> <br>
                         4040 Labrador Lane <br>
                         South City, SC 66666 <br> <br> 
                         <b>Hours</b> <br>
@@ -230,9 +218,6 @@
         
     </div>
 
-
-
-    <footer><p>&copy; Anachebe Asomugha &nbsp;&nbsp;&nbsp;<script >document.write(new Date().getFullYear())</script></p></footer>
-    
+    <%- include('_footer.ejs') %>    
 </body>
 </html>

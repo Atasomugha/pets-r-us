@@ -1,0 +1,136 @@
+<!--
+    Title: grooming.ejs
+    Author: Professor Krasso
+    Date: 29 January 2023
+    Modified By: Anachebe Asomugha
+    Description: ejs code for
+     WEB 340 Pets-R-Us Assignment
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title><%= title %></title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
+
+    <!--Font Family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('_header.ejs') %>
+ 
+    <div id="container">
+
+        <div class="textCard">     
+            <div class="card">   <!-- Welcome Message card -->
+                
+                <div class="card-content" style="border-bottom: 8px solid #00b4d8; border-top: 8px solid black;">
+                    <h2>Welcome to Pets-R-Us <br> The one-stop-shop for all of your pet care needs. </h2>
+                </div>        
+            </div>            
+        </div> 
+        
+        <br>
+        
+        <div class="textCard"> <!-- Meet The Trainer card -->
+            <div class="card">   
+                <div class="card-title">Meet The Trainer: Belinda </div>
+                <div class="card-content">
+                    <img src="./images/trainer-belinda.jpg" alt="Belinda, the dog trainer">
+                </div>
+                <br>
+                <hr style="width: 400px;">
+                <div class="card-content">
+                    <p class="para-left">
+                        With dual degrees in Biology and Animal Behavior, 
+                        Belinda is a former farmhand as well as an animal trainer 
+                        to the (dog) stars. Belinda grew up on a farm in 
+                        rural Wyoming.  And on that farm, she had a dog, 
+                        Eieio, or Io for short. Io was a border collie that 
+                        Belinda’s father, Reginald thought may just make a 
+                        decent herding dog. However, he just couldn’t get it 
+                        to listen. Nearing his wit’s end, Reginald was ready 
+                        to throw in the towel and give away Io, but Belinda 
+                        did not want to lose her dog, so she began training 
+                        him. It turns out, she was naturally gifted at teaching 
+                        new tricks to a dog of any age. She trained Io into a 
+                        sheep dog of such renown, he caught the eye of a dog 
+                        agent who convinced Reginald to allow Io and Belinda 
+                        to compete in Canine agility competitions.  With a 
+                        great deal of effort, Belinda turned Io into a national 
+                        champion. After completing her schooling, Belinda began 
+                        working as an animal wrangler and dog trainer for 
+                        Hollywood, having trained animals for films such as 
+                        “Infinite Overkill,” “Maximum Trouble,” “Double Conquest,” 
+                        and more.
+                        Belinda is excited to partner with Pets-R-Us to bring a 
+                        bit of the Hollywood animal-wrangling professionalism into 
+                        your home.
+                    </p>
+                </div>        
+            </div>
+        </div>
+<br>
+        <div class="textCard">     <!-- Training Packages -->
+            <div class="card">   
+                <div class="card-title"> Training Packages </div>
+
+                    <div class="trainingCard">
+                        <div class="card-content">
+                            <p class="para-left">
+                                <b><u>Private Lessons</u></b><br>
+                                6 Handler Lessons <br>
+                                Off-Leash Obedience <br>
+                                In-Public Training <br> <br> 
+                                <br><b><u>Pricing</u></b> <br>
+                                Puppy: $400 <br>
+                                Adolescent: $500 <br>
+                                Adult: $600
+                                
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <p class="para-left">
+                                <b><u>Off-Leash Camp</u></b><br>
+                                3 - 4 Week Camp <br>                                
+                                6 Handler Lessons <br> <br> <br> <br>
+
+                                <b><u>Pricing</u></b> <br>
+                                Puppy: $500 <br>
+                                Adolescent: $600 <br>
+                                Adult: $700
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <p class="para-left">
+                                <b><u>Life Skills</u></b><br>                                
+                                Off-Leash Camp <br>
+                                6 Handler Lessons <br>
+                                Lifetime Trainer Support <br> <br>
+
+                                <b><u>Pricing</u></b> <br>
+                                Puppy: $700 <br>
+                                Adolescent: $800 <br>
+                                Adult: $850
+                            </p>
+                        </div>
+                    </div>            
+            </div>            
+        </div> 
+
+        
+    
+    </div>
+
+
+
+    <%- include('_footer.ejs') %>    
+    
+</body>
+</html>
