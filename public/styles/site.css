@@ -100,18 +100,19 @@ h3 {
 }
 
 p {
-    display: block;
     font-size: 18px;
     font-weight: 400;
     color: #343a40;
 }
 
 .para-left {
+    display: block;
     text-align: left;
     word-spacing: 1px;
 }
 
 .para-center {
+    display: block;
     text-align: center;
 }
 
