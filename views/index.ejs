@@ -22,10 +22,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <%- include('_header.ejs') %> <!--Header-->
+    <%- include('../partials/_header.ejs') %> <!--Header-->
+
+    
       
     <div id="container">
-
+    <a href="/register"><button style= "margin-left: 400px; margin-right: 400px;"><h2>Click To Sign Up Today!</h2></button></a>
         <div class="textCard">     
             <div class="card">   <!-- Welcome Message card -->
                 
@@ -153,6 +155,10 @@
                     <div class="card-title">Dog Of The Week: Pugly </div>
                     <div class="card-content">
                         <img src="./images/pugly.jpg" alt="Pug in a blanket">
+                        <p>Pugly loves long walks on the beach,  
+                           candlelit dinners, and an old, dust-<br>
+                           covered bone that almost smells like 
+                           the peanut butter that used to be inside of it. </p>
                     </div>        
                 </div>
             </div>
@@ -180,32 +186,23 @@
                 <div class="card">
                     <div class="card-title">Contact Us</div>
                     <div class="card-content">
-                        Have a burning question you've been dying to ask one of our Pet Professionals? <br>
-                        Contact Us Today <br>
+                        <b>Have a burning question you've been dying to ask one of our Pet Professionals? <br>
+                        Contact Us Today</b>
+                         <br>
                         
                         <section class="contact-wrap">
-                            <form action="" class="contact-form">
-            
-                                <div style="float: left; margin-left: 40px;" class="input-block">
-                                  <label for="">Name</label>
-                                  <input type="text" class="form-control">
-                                </div>
-
-                                <div style="float: right; margin-right: 30px;" class="input-block">
-                                  <label for="">Email</label>
-                                  <input type="text" class="form-control">
-                                </div>
-
-                              <br> <br>
-                              
-                                <div style="margin-right: 300px; margin-top: 20px;" class="textarea">
-                                  <label for="">Message</label>
-                                  <textarea rows="3" type="text" class="form-control"></textarea>
-                                </div>
+                            <label for="name">Name</label>
+                            <input class="input" type="text" name="name" id="name">
+                            <br>
+                            <label for="email">Email</label>
+                            <input class="input" type="text" name="email" id="email">
+                            <br>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="20" rows="2"></textarea>
                               
 
                               <div style="margin-left: 250px;">
-                                <button id="submitButton">Submit</button>
+                                <button>Submit</button>
                               </div>
                             </form>
                           </section>
@@ -218,6 +215,6 @@
         
     </div>
 
-    <%- include('_footer.ejs') %>    <!--Footer-->
+    <%- include('../partials/_footer.ejs') %>    <!--Footer-->
 </body>
 </html>
