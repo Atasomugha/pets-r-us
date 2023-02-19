@@ -40,23 +40,30 @@
                 
                 <div class="card-title"> Registration Form </div>
 
-                <div class="card-content">
-                    <div style="margin-left: 55px; margin-right: 100px;">
-                        <label for="customerID"><b>Customer ID:</b></label>
-                        <input class="input" id="customerID" name="customerID" type="text">  
-                    </div>
-                                        
-                        
+                <div class="form">
+                    <form action="/customers" method="post">
+                        <div class="form-field">
+                            <div class="card-content">
+                                <div style="margin-left: 5px; margin-right: 100px;">
+                                    <label for="customerID"><b>Customer ID:</b></label>
+                                    <input class="input" id="customerID" name="customerID" placeholder="ImaCustomer123" type="text">  
+                                </div>
+                                                    
+                                    
 
-                    <div style="margin-left: 100px; margin-right: 100px;">
-                        <label for="email"><b>Email:</b></label>
-                        <input  class="input" type="text" name="email" id="email">
-                    </div>
-                    
-                    <br>
-                    <button type="submit"> All Done!</button>
-                    
-                </div>        
+                                <div style="margin-left: 50px; margin-right: 100px;">
+                                    <label for="email"><b>Email:</b></label>
+                                    <input  class="input" type="text" name="email" placeholder="ImaC123@example.com" id="email">
+                                </div>
+                                
+                                <div>
+                                    <input class="btn" type="submit" value = "Sign Me Up!">
+                                </div>                                        
+                            </div>
+                        </div>    
+                    </form>            
+                </div>
+                
             </div>            
         </div>     
     </div>

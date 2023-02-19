@@ -35,12 +35,35 @@
         
         <br>
      
-        <div class="textCard">     <!-- Boarding Write-up -->
+        <div class="textCard">    
             <div class="card">   
                 
                 <div class="card-title"> Customer List </div>
 
-                <div class="card-content"> 
+                <div class="card-content">
+                    <% if(customer.length > 0) { %>
+                    <table class="table">
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Email</th>
+                        </tr>
+                        <tbody>
+                        <% customer.forEach(function(customer) { %>
+                        <tr>
+                            <td>
+                                <%= customer.customerID %>
+                            </td>
+                            <td>
+                                <%= customer.email %>
+                            </td>
+                            
+                        </tr>
+                        <% }) %>
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                    <h3>Customers have not been added to the MongoDB database. Try adding some!</h3>
+                    <% } %>
                 </div>        
             </div>            
         </div>     

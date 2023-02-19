@@ -12,19 +12,21 @@
 // Import statements
 const express = require('express');
 const path = require('path');
-const Customer = require('./models/customers');
+const Customer = require('./models/customer');
 const mongoose = require('mongoose');
 
-const conn = 'mongodb+srv://web340_admin:ata32321@bellevueuniversity.jcwrynv.mongodb.net/web340DB';
+// Express app variable
+const app = express();
 
-mongoose.connect(conn).then(() => { //establishes connection to mongoDB
+const CONN = 'mongodb+srv://web340_admin:ata32321@bellevueuniversity.jcwrynv.mongodb.net/web340DB';
+
+mongoose.connect(CONN).then(() => { //establishes connection to mongoDB
     console.log('Connection to the database was successful');
 }).catch(err => {
     console.log('MongoDB Error: ' + err.message);
 });
 
-// Express app variable
-const app = express();
+
 
 // View engine set to ejs
 app.set('views', path.join(__dirname, 'views'));
@@ -39,7 +41,7 @@ app.use(express.json());
 // sets listening port to 3000
 const PORT = process.env.PORT || 3000;
 
-// renders home page
+// renders Home page
 app.get('/', (req, res) => {
     res.render('index', {
         title: 'Pets-R-Us: Home',
@@ -47,7 +49,7 @@ app.get('/', (req, res) => {
     });
 });
 
-//renders grooming page
+//renders Grooming page
 app.get('/grooming', (req, res) => {
     res.render('grooming', {
         title: 'Pets-R-Us: Grooming',
@@ -55,7 +57,7 @@ app.get('/grooming', (req, res) => {
     });
 });
 
-//renders training page
+//renders Training page
 app.get('/training', (req, res) => {
     res.render('training', {
         title: 'Pets-R-Us: Training',
@@ -63,7 +65,7 @@ app.get('/training', (req, res) => {
     });
 });
 
-//renders boarding page
+//renders Boarding page
 app.get('/boarding', (req, res) => {
     res.render('boarding', {
         title: 'Pets-R-Us: Boarding',
@@ -71,7 +73,7 @@ app.get('/boarding', (req, res) => {
     });
 });
 
-//renders registration page
+//renders Registration page
 app.get('/register', (req, res) => {
     res.render('register', {
         title: 'Pets-R-Us: Register',
@@ -79,19 +81,26 @@ app.get('/register', (req, res) => {
     });
 });
 
+//renders Customer List page
+app.get('/customer-list', (req, res) => {
+    res.render('customer-list', {
+      title: "Pets-R-Us: Customer List",
+      pageTitle: "Pets-R-Us: Customer List",
+    });
+  });
+
+
 app.post('/customers', (req, res, next) => {
     console.log(req.body);
-    console.log(req.body.customerId);
+    console.log(req.body.customerID);
     console.log(req.body.email);
-
-const customerId = req.body.customerId;
-const email = req.body.email;
-const newCustomer = new Customer({
-    customerId,
-    email
-});
+    const newCustomer = new Customer({
+    customerID: req.body.customerID,
+    email: req.body.email
+})
     console.log(newCustomer);
-    Customer.create(newCustomer, function(err,customer) {
+
+    Customer.create(newCustomer, function(err, customer) {
         if(err) {
             console.log(err);
             next(err);
@@ -104,6 +113,22 @@ const newCustomer = new Customer({
         }
     });
 });    
+
+    app.get('/customers', (req, res) => {
+        Customer.find({}, function(err, customer)  {
+            if (err) {
+                console.log(err);
+                next(err);
+            } else {
+                res.render('customer-list', {
+                    title: 'Pets-R-Us: Customer List',
+                    pageTitle: 'Pets-R-Us: Customer List',
+                    customer: customer
+                });
+            }
+        });
+    });
+
 
 // Listen on port 3000
 app.listen(PORT, () => {
