@@ -18,15 +18,15 @@ const mongoose = require('mongoose');
 // Express app variable
 const app = express();
 
+// Establishes connection to mongoDB
 const CONN = 'mongodb+srv://web340_admin:ata32321@bellevueuniversity.jcwrynv.mongodb.net/web340DB';
 
-mongoose.connect(CONN).then(() => { //establishes connection to mongoDB
+// Delivers messages for Successful connection or Error
+mongoose.connect(CONN).then(() => { 
     console.log('Connection to the database was successful');
 }).catch(err => {
     console.log('MongoDB Error: ' + err.message);
 });
-
-
 
 // View engine set to ejs
 app.set('views', path.join(__dirname, 'views'));
@@ -35,7 +35,7 @@ app.set('view engine', 'ejs');
 // public directory path with images and stylesheets
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.urlencoded({ extended: true })); // added during week 6 assignment
+app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
 
 // sets listening port to 3000
@@ -81,15 +81,7 @@ app.get('/register', (req, res) => {
     });
 });
 
-//renders Customer List page
-app.get('/customer-list', (req, res) => {
-    res.render('customer-list', {
-      title: "Pets-R-Us: Customer List",
-      pageTitle: "Pets-R-Us: Customer List",
-    });
-  });
-
-
+// Routing customer HTTP POST requests
 app.post('/customers', (req, res, next) => {
     console.log(req.body);
     console.log(req.body.customerID);
@@ -100,6 +92,7 @@ app.post('/customers', (req, res, next) => {
 })
     console.log(newCustomer);
 
+// Routing to landing page if there is no error
     Customer.create(newCustomer, function(err, customer) {
         if(err) {
             console.log(err);
@@ -114,6 +107,7 @@ app.post('/customers', (req, res, next) => {
     });
 });    
 
+// Gets customer list from mongoDB database
     app.get('/customers', (req, res) => {
         Customer.find({}, function(err, customer)  {
             if (err) {

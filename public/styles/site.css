@@ -24,25 +24,6 @@ img {
     border: 2px solid black;
 }
 
-.btn {
-    border: 2px solid black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    padding: 15px 32px;
-    color: black;
-    background-color: #00b4d8;
-}
-.btn:hover{
-    border: 2px solid white;
-    background-color: #03045e;
-    color: white;
-}
-
-
 /* Card styling */
 .card {
     background-color: white;
@@ -93,11 +74,6 @@ img {
     
 }
 
-/* Navigation bar styling  */
-.navbar {
-    float: right;
-}
-
 /* Styling for text  */
 h1 {
     text-align: center;
@@ -146,7 +122,21 @@ p {
     font-size: 18px;
 }
 
-/* anchor styling */
+textarea {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+/* Navigation bar and anchor styling */
+
+.navbar {
+    float: right;
+}
+
 .nav-a {
     font-weight: 500;
     color: #03045e;
@@ -170,8 +160,25 @@ a:visited {
     color: #03045e;
 }
 
-/* Simple button styling */
+/* Button styling */
 
+.btn {
+    border: 2px solid black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color: black;
+    background-color: #00b4d8;
+}
+.btn:hover{
+    border: 2px solid white;
+    background-color: #03045e;
+    color: white;
+}
 
 .input {
     padding: 12px 20px;
@@ -182,15 +189,7 @@ a:visited {
     box-sizing: border-box; 
 }
 
-textarea {
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 4px;
-    box-sizing: border-box; 
-}
-
+/* Table Styling */
 .table {
     border-collapse: collapse;
     width: auto;
