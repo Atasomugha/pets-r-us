@@ -128,8 +128,7 @@ app.post('/customers', (req, res, next) => {
         });
     }); 
 
-    // Appointments
-    
+    // Gets services from JSON file and renders Appointment Booking page    
     app.get('/booking', (req, res) => {
         let jsonFile = fs.readFileSync('./public/data/services.json');
         let services = JSON.parse(jsonFile);
@@ -143,7 +142,7 @@ app.post('/customers', (req, res, next) => {
         });
       });
       
-      // does the POST action for the booking process when the user clicks on the Book Appointment button
+      // Posts appointment information to database
       app.post('/booking', (req, res, next) => {
         const newAppointment = new appointment({
             userName: req.body.userName,
@@ -152,7 +151,7 @@ app.post('/customers', (req, res, next) => {
             email: req.body.email,
             service: req.body.service
         })
-        // create a new appointment and log an error if there is one - if not, render index page
+        // Create Appointment if there is no error
         appointment.create(newAppointment, function(err, appointment) {
             if (err) {
                 console.log(err);
@@ -165,56 +164,6 @@ app.post('/customers', (req, res, next) => {
             }
         })
       })
-
-/*
-// renders Appointments page
-app.get("/appointments", (req, res) => {
-    const jsonFile = fs.readFileSync("./public/data/services.json");
-    const services = JSON.parse(jsonFile);
-  
-    console.log(services);
-  
-    res.render("booking", {
-      title: "Pets-R-Us: My Appointments",
-      pageTitle: "Pets-R-Us My Appointments",
-      service: services,
-    });
-  });    
-
-// Parses data from json file
-app.post('/appointment', (req, res, next) => {
-    console.log(req.body);
-    console.log(req.body.firstName);
-    console.log(req.body.lastName);
-    console.log(req.body.email);
-    console.log(req.body.service);
-    
-    const newAppointment = new Appointment({
-    userName: req.body.userName,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    service: req.body.service
-});
-    console.log(newAppointment);
-
-   
-
-// Routing to landing page if there is no error
-    Appointment.create(newAppointment, function(err, appointment) {
-        if(err) {
-            console.log(err);
-            next(err);
-        }
-        else {
-            res.render('index', {
-                title: 'Pets-R-Us: Home',
-                pageTitle: 'Pets-R-Us: Home'
-            }); 
-        }
-    });
-});   
-*/ 
 
 // Listen on port 3000
 app.listen(PORT, () => {
