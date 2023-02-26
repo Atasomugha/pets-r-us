@@ -1,0 +1,93 @@
+<!--
+    Title: booking.ejs
+    Author: Professor Krasso
+    Date: 25 February 2023
+    Modified By: Anachebe Asomugha
+    Description: Appointment-making
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/styles/site.css">
+
+    <!--Font Family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('../partials/_header.ejs') %> <!--Header-->
+ 
+    <div id="container">
+
+        <div class="textCard">     
+            <div class="card">   <!-- Welcome Message card -->
+                
+                <div class="card-content" style="border-bottom: 8px solid #00b4d8; border-top: 8px solid black;">
+                    <h2>Welcome to Pets-R-Us <br> The one-stop-shop for all of your pet care needs. </h2>
+                </div>        
+            </div>            
+        </div> 
+        
+        <br>
+
+<!-- Contains table that displays registered customers -->
+
+        <div class="textCard">    
+            <div class="card">   
+                
+                <div class="card-title"> Book Your Appointment </div><br>
+
+                <div class="form">
+                    <form action="/appointments" method="post">
+                        <div class="form-field">
+                            <div class="card-content">
+                                <div style="margin-right: 70px;">
+                                    <label for="userName"><b>Username:</b></label> <!--Username field-->
+                                    <input class="input" id="userName" name="userName" placeholder="User Name" type="text" autofocus required>  
+                                </div> <br>
+
+                                <div style="margin-right: 70px;">
+                                    <label for="firstName"><b>First Name:</b></label> <!--First Name field-->
+                                    <input  class="input" type="text" name="firstName" placeholder="First Name" id="firstName" required>
+                                </div> <br>
+
+                                <div style="margin-right: 70px;">
+                                    <label for="lastName"><b>Last Name:</b></label> <!--Last Name field-->
+                                    <input  class="input" type="text" name="lastName" placeholder="Last Name" id="lastName" required>
+                                </div> <br>
+
+                                <div style="margin-right: 40px;">
+                                    <label for="email"><b>Email:</b></label> <!--Email field-->
+                                    <input  class="input" type="text" name="email" placeholder="Email" id="email" required>
+                                </div> <br>
+
+                                <div style="margin-right: 62px;">
+                                    <label for="service"><b>Services:</b></label> <!--Services field-->
+                                    <select id="service" name="service" class="drop-down-menu" required>
+                                        <option value="select">--Select--</option>
+                                        <% services.forEach((service) => { %>
+                                            <option value="'<%= service.value %>'"><%= service.text %></option>
+                                            <% }) %>
+                                    </select>
+                                </div> <br>
+                                
+                                <div>
+                                    <input class="btn" type="submit" value = "Set Appointment">
+                                </div>                                        
+                            </div>
+                        </div>    
+                    </form>            
+                </div>        
+            </div>            
+        </div>     
+    </div>
+
+
+
+    <%- include('../partials/_footer.ejs') %>    <!--Footer-->
+</body>
+</html>

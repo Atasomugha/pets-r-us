@@ -73,6 +73,9 @@ img {
     text-align: center;
     
 }
+.appt-form {
+    float: left;
+}
 
 /* Styling for text  */
 h1 {
@@ -188,7 +191,13 @@ a:visited {
     border-radius: 4px;
     box-sizing: border-box; 
 }
-
+#service {
+    width: 190px;
+    height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 8px;
+}
 /* Table Styling */
 .table {
     border-collapse: collapse;
