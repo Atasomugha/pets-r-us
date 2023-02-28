@@ -143,16 +143,23 @@ app.post('/customers', (req, res, next) => {
       });
       
       // Posts appointment information to database
-      app.post('/booking', (req, res, next) => {
-        const newAppointment = new appointment({
+      app.post('/appointments', (req, res, next) => {
+        console.log(req.body);
+        console.log(req.body.userName);
+        console.log(req.body.firstName);
+        console.log(req.body.lastName);
+        console.log(req.body.email);
+        const newAppointment = new Appointment({
+            
             userName: req.body.userName,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
             service: req.body.service
-        })
+        });
+        console.log(newAppointment);
         // Create Appointment if there is no error
-        appointment.create(newAppointment, function(err, appointment) {
+        Appointment.create(newAppointment, function(err, appointment) {
             if (err) {
                 console.log(err);
                 next(err);
@@ -164,6 +171,26 @@ app.post('/customers', (req, res, next) => {
             }
         })
       })
+
+      // Renders My Appointments Page
+      app.get('/my-appointments', (req, res) => {
+        res.render('my-appointments', {
+            title: 'Pets-R-Us: My Appointments',
+            pageTitle: 'Pets-R-Us: My Appointments'
+        })
+    })
+    
+     // Finds Appointment Information from Database
+    app.get('/api/orders/:email', async(req, res, next) => {
+        Appointment.find({'email': req.params.email}, function(err, appointments) {
+            if (err) {
+                console.log(err);
+                next(err);
+            } else {
+                res.json(appointments);
+            }
+        })
+    })
 
 // Listen on port 3000
 app.listen(PORT, () => {
