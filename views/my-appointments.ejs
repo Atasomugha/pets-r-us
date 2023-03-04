@@ -69,7 +69,7 @@
         // Onclick Event 
         document.getElementById('search').onclick = function() {
           const email = document.getElementById('email').value;
-          fetch('/api/orders/' + email) // Fetches Service when Email is entered
+          fetch('/api/appointments/' + email) // Fetches Service when Email is entered
                   .then(res => res.json())
                   .then(data => {
                     // Variable representing the table that displays the Customer's Appointment Information

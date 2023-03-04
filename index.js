@@ -44,7 +44,7 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use("/site", express.static(path.join(__dirname, "public/stylesheets")));
 
 // sets listening port to 3000
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 // renders Home page
 app.get('/', (req, res) => {
@@ -181,7 +181,7 @@ app.post('/customers', (req, res, next) => {
     })
     
      // Finds Appointment Information from Database
-    app.get('/api/orders/:email', async(req, res, next) => {
+     app.get('/api/appointments/:email', async(req, res, next) => {
         Appointment.find({'email': req.params.email}, function(err, appointments) {
             if (err) {
                 console.log(err);
@@ -190,7 +190,7 @@ app.post('/customers', (req, res, next) => {
                 res.json(appointments);
             }
         })
-    })
+      })
 
 // Listen on port 3000
 app.listen(PORT, () => {
